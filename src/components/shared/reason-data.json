@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_reason_data",
+  "info": {
+    "displayName": "reason_data",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "reason_title": {
+      "type": "string",
+      "required": true
+    },
+    "reason_desc": {
+      "type": "string",
+      "required": true
+    },
+    "reason_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

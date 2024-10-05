@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_contents",
+  "info": {
+    "singularName": "page-content",
+    "pluralName": "page-contents",
+    "displayName": "page_content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "head": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "reason_data": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.reason-data"
+    }
+  }
+}

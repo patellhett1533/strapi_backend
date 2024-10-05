@@ -39,6 +39,23 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedReasonData extends Struct.ComponentSchema {
+  collectionName: 'components_shared_reason_data';
+  info: {
+    displayName: 'reason_data';
+    icon: 'stack';
+  };
+  attributes: {
+    reason_title: Schema.Attribute.String & Schema.Attribute.Required;
+    reason_desc: Schema.Attribute.String & Schema.Attribute.Required;
+    reason_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
@@ -68,6 +85,7 @@ declare module '@strapi/strapi' {
       'shared.slider': SharedSlider;
       'shared.seo': SharedSeo;
       'shared.rich-text': SharedRichText;
+      'shared.reason-data': SharedReasonData;
       'shared.quote': SharedQuote;
       'shared.media': SharedMedia;
     }
